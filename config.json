@@ -10,6 +10,10 @@
             "icon": "image_search",
             "category": "OCR",
             "local": true,
+            "docker": {
+                "name": "pdfix/ocr-tesseract",
+                "tag": "latest"
+            },
             "program": "docker run -v \"${working_directory}:/data\" --rm pdfix/ocr-tesseract:latest ocr --name \"${license_name}\" --key \"${license_key}\" -i \"/data/${input_pdf}\" -o \"/data/${output_pdf}\" --lang \"${language}\"",
             "args": [
                 {
@@ -549,6 +553,10 @@
             "icon": "image_search",
             "category": "OCR",
             "local": true,
+            "docker": {
+                "name": "pdfix/ocr-tesseract",
+                "tag": "latest"
+            },
             "program": "docker run -v \"${working_directory}:/data\" --rm pdfix/ocr-tesseract:latest ocr-content --name \"${license_name}\" --key \"${license_key}\" -i \"/data/${input_pdf}\" -o \"/data/${output_pdf}\" --lang \"${language}\" --params \"${params}\"",
             "args": [
                 {
